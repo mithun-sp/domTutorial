@@ -19,17 +19,46 @@
 // let li = document.getElementsByTagName("li")
 // li[4].innerText = "Hello 5"
 
-//Query Selector
-let secondItem = document.querySelector(".list-group-item:nth-child(2)")
-secondItem.style.backgroundColor = "green"
+// //Query Selector
+// let secondItem = document.querySelector(".list-group-item:nth-child(2)")
+// secondItem.style.backgroundColor = "green"
 
-let thirdItem = document.querySelector(".list-group-item:nth-child(3)")
-thirdItem.style.display = "none"
+// let thirdItem = document.querySelector(".list-group-item:nth-child(3)")
+// thirdItem.style.display = "none"
 
-//Query Selectore All
-let titles = document.querySelectorAll(".title")
-console.log(titles)
+// //Query Selectore All
+// let titles = document.querySelectorAll(".title")
+// console.log(titles)
 
-let odd = document.querySelectorAll(".li:nth-child(odd)")
-let even = document.querySelectorAll(".li:nth-child(even)")
+// let odd = document.querySelectorAll(".li:nth-child(odd)")
+// let even = document.querySelectorAll(".li:nth-child(even)")
+
+// TRAVERSING THE DOM //
+
+let itemList = document.querySelector("#items")
+//parentNode
+itemList.parentElement.style.backgroundColor = "#f4f4f4"
+
+itemList.lastElementChild.textContent = "Hello World"
+console.log(itemList.lastChild)
+
+console.log(itemList.nextSibling)
+
+itemList.previousElementSibling.style.color = "green"
+
+let newDiv = document.createElement("div")
+
+newDiv.className = "hello"
+newDiv.id = "hello"
+
+newDiv.setAttribute("title", "Hello Div")
+
+let newDivText = document.createTextNode("Hello World")
+
+newDiv.appendChild(newDivText)
+
+let container = document.querySelector("header .container")
+let h1 = document.querySelector("header h1")
+
+container.insertBefore(newDiv,h1)
 
